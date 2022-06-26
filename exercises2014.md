@@ -151,4 +151,81 @@ F|❌|0|❌|❌|0|0
 
 **4. a)**
 
+### I
 
+```
+Q(10, 2) = 0
+Q(7, 2) = 0
+Q(2, 1) = 100
+```
+
+State / Action | 1 | 2 | 3
+---------------|---|---|---
+10 | 0 | 0 | 0 
+9 | 0 | 0 | 0 
+8 | 0 | 0 | 0 
+7 | 0 | 0 | 0 
+6 | 0 | 0 | 0 
+5 | 0 | 0 | 0 
+4 | 0 | 0 | 0 
+3 | 0 | 0 | 0 
+2 | 100 | 0 | 0 
+1 | 0 | 0 | 0 
+0 | 0 | 0 | 0
+
+### II
+
+```
+Q(10, 2) = 0
+Q(6, 1) = 50
+Q(2, 1) = 100
+```
+
+State / Action | 1 | 2 | 3
+---------------|---|---|---
+10 | 0 | 0 | 0 
+9 | 0 | 0 | 0 
+8 | 0 | 0 | 0 
+7 | 0 | 0 | 0 
+6 | 50 | 0 | 0 
+5 | 0 | 0 | 0 
+4 | 0 | 0 | 0 
+3 | 0 | 0 | 0 
+2 | 100 | 0 | 0 
+1 | 0 | 0 | 0 
+0 | 0 | 0 | 0
+
+### III
+
+```
+Q(10, 1) = 25
+Q(6, 1) = 50
+Q(2, 1) = 100
+```
+
+State / Action | 1 | 2 | 3
+---------------|---|---|---
+10 | 25 | 0 | 0 
+9 | 0 | 0 | 0 
+8 | 0 | 0 | 0 
+7 | 0 | 0 | 0 
+6 | 50 | 0 | 0 
+5 | 0 | 0 | 0 
+4 | 0 | 0 | 0 
+3 | 0 | 0 | 0 
+2 | 100 | 0 | 0 
+1 | 0 | 0 | 0 
+0 | 0 | 0 | 0
+
+**b)**
+
+- `s = 10 -> a = 1 (value 25)`
+- Other strategy removes 3 of remaining 9
+- `s = 6 -> a = 1 (value 50)`
+- Other strategy removes 3 of remaining 5
+- `s = 2 -> a = 1 (value 100)`
+- Other strategy loses
+
+Therefore the agent will win against the strategy of always removing 3 toothpicks.
+
+**c)** We could add a negative reward to states 5 and 9 (state 1 already has a negative reward), to discourage the agent from taking actions that can lead to these states.
